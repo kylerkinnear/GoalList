@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/dark_gray" >
+
+	<Button
+	    android:id="@+id/id_Share"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:background="@android:color/transparent"
+	    android:onClick="onClick"
+	    android:text="@string/string_Share" />
+
+	<Button
+	    android:id="@+id/id_Goal_List"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:background="@android:color/transparent"
+	    android:clickable="false"
+	    android:text="@string/string_Goal_List"
+	    android:textColor="@android:color/white" />
+    
+</RelativeLayout>

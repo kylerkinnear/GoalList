@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GoalList</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="string_My_Goals">My Goals</string>
+    <string name="string_Settings">Settings</string>
+    <string name="string_Goal_List">Goal List</string>
+    <string name="string_Share">Share</string>
+    <string name="string_Goals_In_Progress">GOALS IN PROGRESS</string>
+    <string name="string_Goal_One">GOAL ONE</string>
+
+</resources>
