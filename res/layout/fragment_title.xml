@@ -2,27 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
-    android:background="@color/dark_gray" >
+    android:background="@drawable/img_title_bg" >
 
 	<Button
-	    android:id="@+id/id_Share"
+	    android:id="@+id/button_Share"
 	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
+	    android:layout_height="45dp"
 	    android:layout_alignParentRight="true"
 	    android:layout_alignParentTop="true"
 	    android:background="@android:color/transparent"
-	    android:onClick="onClick"
-	    android:text="@string/string_Share" />
-
-	<Button
-	    android:id="@+id/id_Goal_List"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
+	    android:layout_marginRight="10dp"
+	    android:onClick="onButtonClick"
+	    android:text="@string/string_Share"
+	    android:textColor="@android:color/white" />
+	
+	<TextView
+	    android:id="@+id/textview_Goal_List"
+	    android:layout_width="120dp"
+	    android:layout_height="45dp"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true"
-	    android:background="@android:color/transparent"
-	    android:clickable="false"
-	    android:text="@string/string_Goal_List"
-	    android:textColor="@android:color/white" />
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/img_goal_list_logo" />
     
 </RelativeLayout>

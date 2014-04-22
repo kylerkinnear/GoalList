@@ -1,0 +1,11 @@
+Goal1;3;5;apple,i;orange,i;pear,c;plum,c;pineapple,c
+Goal2;2;2;red,c;orange,c
+Goal3;1;2;viper,i;cobra,c
+Goal4;0;0;
+Goal5;3;3;one,c;2,c;...,c
+Goal6;0;0;
+gOaL7;0;0;
+gOal8;0;0;
+GoAl9;0;0;
+Gool10;0;0;
+Gaal11;0;0

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <color name="dark_gray">#575757</color>
+<color name="fragment_main_buttons_background">#181818</color>
+<color name="green_complete">#00CD00</color>
+<color name="red_incomplete">#FF3030</color>
 </resources>
