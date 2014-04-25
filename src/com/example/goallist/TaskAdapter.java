@@ -5,11 +5,14 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Checkable;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class TaskAdapter extends BaseAdapter {
 
@@ -23,7 +26,7 @@ public class TaskAdapter extends BaseAdapter {
 		tasks = t;
 		numTasks = tasks.size();
 	}
-
+	
 	@Override
 	public int getCount() {
 		return numTasks;
@@ -38,38 +41,88 @@ public class TaskAdapter extends BaseAdapter {
 	public long getItemId(int position) {
 		return position;
 	}
+
+	public int getNumSelected() {
+		int count = 0;
+		for (int i = 0; i < numTasks; i++) {
+			if (this.tasks.get(i).isSelected()) {
+				count++;
+			}
+		}
+		return count;
+	}
 	
-	public void toggleSelection(int position){
-		Toast.makeText(whoCalledOnMe, "My Goals", Toast.LENGTH_SHORT).show();
+	public ArrayList<Integer> getSelectedPositions(){
+		ArrayList<Integer> positions=new ArrayList<Integer>();
+		for (int i = 0; i < numTasks; i++){
+			if (this.tasks.get(i).isSelected()){
+				positions.add(i);
+			}
+		}
+		return positions;
 	}
 	
 	static class ViewHolder {
+		CheckBox checkBox;
 		TextView taskName;
 		TextView taskDueDate;
 		TextView completeness;
+		Button removeButton;
+		Button completeButton;
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		ViewHolder holder;
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		View view = null;
 		if (convertView == null) {
-			convertView = LayoutInflater.from(whoCalledOnMe).inflate(
+			view = LayoutInflater.from(whoCalledOnMe).inflate(
 					R.layout.view_holder_task_item, null);
-
-			holder = new ViewHolder();
-			holder.taskName = (TextView) convertView
+			final ViewHolder holder = new ViewHolder();
+			holder.checkBox = (CheckBox) view.findViewById(R.id.task_check_box);
+			holder.taskName = (TextView) view
 					.findViewById(R.id.holder_task_name);
-			holder.taskDueDate = (TextView) convertView
+			holder.taskDueDate = (TextView) view
 					.findViewById(R.id.holder_task_due_date);
-			holder.completeness = (TextView) convertView
+			holder.completeness = (TextView) view
 					.findViewById(R.id.holder_completeness_flag);
-			convertView.setTag(holder);
+			holder.removeButton = (Button) view.findViewById(R.id.holder_remove_button);
+			holder.completeButton = (Button) view.findViewById(R.id.holder_complete_button);
+			holder.checkBox
+					.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+						@Override
+						public void onCheckedChanged(CompoundButton buttonView,
+								boolean isChecked) {
+							Task element = (Task) holder.checkBox.getTag();
+							element.setSelected(buttonView.isChecked());
+						}
+					});
+			holder.removeButton.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					((GoalActivity)whoCalledOnMe).onTaskButtonClicked(v,position);
+				}
+			});
+			holder.completeButton.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					((GoalActivity)whoCalledOnMe).onTaskButtonClicked(v,position);
+				}
+			});
+			view.setTag(holder);
+			holder.checkBox.setTag(tasks.get(position));
 		} else {
-			holder = (ViewHolder) convertView.getTag();
+			view = convertView;
+			((ViewHolder) view.getTag()).checkBox.setTag(tasks.get(position));
 		}
 		Task nextItem = getItem(position);
 
+		ViewHolder holder = (ViewHolder) view.getTag();
+		holder.checkBox.setChecked(tasks.get(position).isSelected());
 		holder.taskName.setText(nextItem.getTaskName());
 		if (nextItem.getTaskDueDate() != null) {
 			holder.taskDueDate.setText(nextItem.getTaskDueDate());
@@ -80,20 +133,15 @@ public class TaskAdapter extends BaseAdapter {
 			holder.completeness.setTextColor(whoCalledOnMe.getResources()
 					.getColor(R.color.green_complete));
 			holder.completeness.setText("C");
-			
+
 		} else {
 			holder.completeness.setTextColor(whoCalledOnMe.getResources()
 					.getColor(R.color.red_incomplete));
 			holder.completeness.setText("I");
-			
+
 		}
-		convertView.setOnClickListener(new OnClickListener(){
-			public void onClick(View v){
-				boolean checked=convertView.isItemChecked(pos);
-				friendsListView.setItemChecked(pos,!checked);
-			}
-		})
-		
-		return convertView;
+
+		return view;
 	}
+	
 }

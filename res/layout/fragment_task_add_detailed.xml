@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/add_task_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/add_task_edit_text"
+            android:onClick="selectDate" >
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/add_task_repeat_option"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRepeatCheckboxClicked" >
+            </CheckBox>
+
+            <TextView
+                android:id="@+id/add_task_repeat_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/add_task_repeat_text" >
+            </TextView>
+        </LinearLayout>
+
+        <DatePicker
+            android:id="@+id/add_task_date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+        </DatePicker>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_add_task_details"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="onButtonClick"
+        android:text="@string/add_task_button" >
+    </Button>
+
+</LinearLayout>

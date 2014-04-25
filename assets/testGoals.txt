@@ -1,4 +1,4 @@
-Goal1;3;5;apple,i,4-3-14;orange,i,4-4-14;pear,c;plum,c;pineapple,c
+Goal1;3;5;apple,i,4-3-14;orange,i,4-4-14;pear,c;plum,c;pineapple,c;
 Goal2;2;2;red,c,5-12-14;orange,c,4-15-14
 Goal3;1;2;viper,i;cobra,c
 Goal4;0;0;

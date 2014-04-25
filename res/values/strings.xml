@@ -12,7 +12,7 @@
     <string name="string_Goals_In_Progress">GOALS IN PROGRESS</string>
     <string name="string_Goal_One">GOAL ONE</string>
 
-    <!-- task footer button strings -->
+    <!-- task header button strings -->
     <string name="add_task_button">Add Task</string>
     <string name="edit_task_button">Edit Task</string>
     <string name="remove_task_button">Remove Task</string>
@@ -20,5 +20,21 @@
     <string name="edit_tasks_button">Edit Tasks</string>
     <string name="remove_tasks_button">Remove Tasks</string>
     <string name="complete_tasks_button">Complete Tasks</string>
+    <string name="string_Goal_Name">Goal Name</string>
+    <string name="string_Task_Name">Task Name</string>
+    <string name="string_Month">Month</string>
+    <string name="string_Day">Day</string>
+    <string name="string_Year">Year</string>
+    
+    <!-- task viewHolder Button Strings -->
+    <string name="holder_remove_button">Remove</string>
+    <string name="holder_complete_button">Complete</string>
+
+    <!-- task add button detailed strings -->
+    <string name="add_task_edit_text">New Task</string>
+    <string name="add_task_repeat_text">Repeat?</string>
+
+    <!-- file names -->
+    <string name="user_goals_filename">user_goals</string>
 
 </resources>

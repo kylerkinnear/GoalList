@@ -4,12 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 	<fragment
-	    android:id="@+id/fragment_title.xml"
+	    android:id="@+id/fragment_title"
 	    android:name="com.example.goallist.FragmentTitleBar"
 	    android:layout_width="match_parent"
 	    android:layout_height="45dp">
 	</fragment>
-    
+    <FrameLayout
+        android:id="@+id/replaceableFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </FrameLayout>
     <fragment 
         android:id="@+id/fragment_task_list"
         android:name="com.example.goallist.FragmentTaskList"

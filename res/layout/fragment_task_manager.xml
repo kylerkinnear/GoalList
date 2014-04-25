@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_task_manager_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Top_Left"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:background="@drawable/img_header_top_left" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Top_Mid"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textview_Task_Manager_Header_Top_Left"
+        android:background="@drawable/img_header_top_padding"
+        android:gravity="center"
+        android:text="@string/string_Goal_Name"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Top_Right"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_header_top_right" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Bottom_Left"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/textview_Task_Manager_Header_Top_Left"
+        android:background="@drawable/img_manager_header_left" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Bottom_Mid"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_below="@+id/textview_Task_Manager_Header_Top_Mid"
+        android:layout_toLeftOf="@+id/textview_Task_Manager_Header_Bottom_Right"
+        android:layout_toRightOf="@+id/textview_Task_Manager_Header_Bottom_Left"
+        android:background="@drawable/img_manager_header_padding" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Header_Bottom_Right"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_Task_Manager_Header_Top_Right"
+        android:background="@drawable/img_manager_header_right" />
+
+    <EditText
+        android:id="@+id/edittext_Task_Manager_Task_Name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview_Task_Manager_Header_Bottom_Mid"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/button_task_manager_add"
+        android:layout_toRightOf="@+id/button_task_manager_add"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:textColor="@color/white_edit_text"
+        android:hint="@string/string_Task_Name">
+    </EditText>
+
+    <Button
+        android:id="@+id/button_task_manager_add"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_Task_Manager_Header_Bottom_Right"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/imgbutton_add"
+        android:onClick="onButtonClick" />
+
+    <TextView
+        android:id="@+id/textview_task_manager_add_spacer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/edittext_Task_Manager_Task_Name"
+        android:background="@drawable/img_manager_spacer" />
+
+    <EditText
+        android:id="@+id/edittext_Task_Manager_Month"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview_task_manager_add_spacer"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:textColor="@color/white_edit_text"
+        android:hint="@string/string_Month"
+        android:focusable="false"
+        android:onClick="selectDate">
+    
+    </EditText>
+
+    <EditText
+        android:id="@+id/edittext_Task_Manager_Day"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_task_manager_add_spacer"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/edittext_Task_Manager_Month"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:hint="@string/string_Day"
+        android:textColor="@color/white_edit_text"
+        android:focusable="false"
+        android:onClick="selectDate">
+   
+    </EditText>
+
+    <EditText
+        android:id="@+id/edittext_Task_Manager_Year"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_task_manager_add_spacer"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/edittext_Task_Manager_Day"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:textColor="@color/white_edit_text"
+        android:hint="@string/string_Year"
+        android:focusable="false"
+        android:onClick="selectDate">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Date_Spacer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/edittext_Task_Manager_Month"
+        android:background="@drawable/img_manager_spacer" />
+
+    <Button
+        android:id="@+id/button_Task_Manager_Cancel_Left"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview_Task_Manager_Date_Spacer"
+        android:background="@drawable/imgbutton_cancel_left"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/button_Task_Manager_Cancel_Left_Padding"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_Task_Manager_Date_Spacer"
+        android:layout_toLeftOf="@+id/button_Task_Manager_Cancel"
+        android:layout_toRightOf="@+id/button_Task_Manager_Cancel_Left"
+        android:background="@drawable/imgbutton_cancel_padding"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/button_Task_Manager_Cancel"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_Task_Manager_Date_Spacer"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/imgbutton_cancel"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/button_Task_Manager_Cancel_Right_Padding"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_Task_Manager_Date_Spacer"
+        android:layout_toLeftOf="@+id/button_Task_Manager_Cancel_Right"
+        android:layout_toRightOf="@+id/button_Task_Manager_Cancel"
+        android:background="@drawable/imgbutton_cancel_padding"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/button_Task_Manager_Cancel_Right"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_Task_Manager_Date_Spacer"
+        android:background="@drawable/imgbutton_cancel_right"
+        android:onClick="onButtonClick" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Tasks"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/button_Task_Manager_Cancel"
+        android:background="@drawable/img_tasks" />
+
+    <TextView
+        android:id="@+id/textview_Task_Manager_Tasks_Spacer"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/button_Task_Manager_Cancel"
+        android:layout_toRightOf="@+id/textview_Task_Manager_Tasks"
+        android:background="@drawable/img_tasks_padding" />
+
+</RelativeLayout>

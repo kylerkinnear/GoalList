@@ -8,13 +8,22 @@
 package com.example.goallist;
 
 public final class R {
+    public static final class anim {
+        public static final int fadein=0x7f040000;
+        public static final int fadeout=0x7f040001;
+        public static final int slideleft=0x7f040002;
+        public static final int slideright=0x7f040003;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int dark_gray=0x7f050000;
-        public static final int fragment_main_buttons_background=0x7f050001;
-        public static final int green_complete=0x7f050002;
-        public static final int red_incomplete=0x7f050003;
+        public static final int dark_gray=0x7f060000;
+        public static final int fragment_main_buttons_background=0x7f060001;
+        public static final int fragment_my_goals_background=0x7f060002;
+        public static final int fragment_my_goals_background_filler=0x7f060003;
+        public static final int green_complete=0x7f060005;
+        public static final int red_incomplete=0x7f060006;
+        public static final int white_edit_text=0x7f060004;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -23,109 +32,234 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int img_goal_list_logo=0x7f020001;
-        public static final int img_goals_in_progress=0x7f020002;
-        public static final int img_goals_in_progress_padding=0x7f020003;
-        public static final int img_title_bg=0x7f020004;
-        public static final int imgbutton_button_padding_mygoals=0x7f020005;
-        public static final int imgbutton_button_padding_settings=0x7f020006;
-        public static final int imgbutton_mygoals=0x7f020007;
-        public static final int imgbutton_settings=0x7f020008;
-        public static final int sample_0=0x7f020009;
-        public static final int sample_1=0x7f02000a;
-        public static final int sample_2=0x7f02000b;
-        public static final int sample_3=0x7f02000c;
-        public static final int sample_4=0x7f02000d;
-        public static final int sample_5=0x7f02000e;
-        public static final int sample_6=0x7f02000f;
-        public static final int sample_7=0x7f020010;
+        public static final int edittext_background=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int img_button_shadding_padding=0x7f020002;
+        public static final int img_button_shading=0x7f020003;
+        public static final int img_button_spacer=0x7f020004;
+        public static final int img_goal_list_logo=0x7f020005;
+        public static final int img_goals_in_progress=0x7f020006;
+        public static final int img_goals_in_progress_padding=0x7f020007;
+        public static final int img_header_bottom_left=0x7f020008;
+        public static final int img_header_bottom_padding=0x7f020009;
+        public static final int img_header_bottom_right=0x7f02000a;
+        public static final int img_header_top_left=0x7f02000b;
+        public static final int img_header_top_padding=0x7f02000c;
+        public static final int img_header_top_right=0x7f02000d;
+        public static final int img_manager_header_left=0x7f02000e;
+        public static final int img_manager_header_padding=0x7f02000f;
+        public static final int img_manager_header_right=0x7f020010;
+        public static final int img_manager_spacer=0x7f020011;
+        public static final int img_my_goals_background=0x7f020012;
+        public static final int img_task_manager_background=0x7f020013;
+        public static final int img_tasks=0x7f020014;
+        public static final int img_tasks_padding=0x7f020015;
+        public static final int img_title_bg=0x7f020016;
+        public static final int imgbutton_about=0x7f020017;
+        public static final int imgbutton_about_clicked=0x7f020018;
+        public static final int imgbutton_add=0x7f020019;
+        public static final int imgbutton_add_clickable=0x7f02001a;
+        public static final int imgbutton_button_padding_mygoals=0x7f02001b;
+        public static final int imgbutton_button_padding_mygoals_clicked=0x7f02001c;
+        public static final int imgbutton_button_padding_settings=0x7f02001d;
+        public static final int imgbutton_button_padding_settings_clicked=0x7f02001e;
+        public static final int imgbutton_cancel=0x7f02001f;
+        public static final int imgbutton_cancel_clicked=0x7f020020;
+        public static final int imgbutton_cancel_left=0x7f020021;
+        public static final int imgbutton_cancel_padding=0x7f020022;
+        public static final int imgbutton_cancel_padding_clicked=0x7f020023;
+        public static final int imgbutton_cancel_right=0x7f020024;
+        public static final int imgbutton_cancel_right_clicked=0x7f020025;
+        public static final int imgbutton_completed=0x7f020026;
+        public static final int imgbutton_completed_clicked=0x7f020027;
+        public static final int imgbutton_create_new=0x7f020028;
+        public static final int imgbutton_create_new_clicked=0x7f020029;
+        public static final int imgbutton_create_new_padding_clicked=0x7f02002a;
+        public static final int imgbutton_general_padding=0x7f02002b;
+        public static final int imgbutton_general_padding_clicked=0x7f02002c;
+        public static final int imgbutton_goal_settings=0x7f02002d;
+        public static final int imgbutton_goal_settings_clicked=0x7f02002e;
+        public static final int imgbutton_in_progress=0x7f02002f;
+        public static final int imgbutton_in_progress_clicked=0x7f020030;
+        public static final int imgbutton_left_clicked=0x7f020031;
+        public static final int imgbutton_mygoals=0x7f020032;
+        public static final int imgbutton_mygoals_clicked=0x7f020033;
+        public static final int imgbutton_notifications=0x7f020034;
+        public static final int imgbutton_notifications_clicked=0x7f020035;
+        public static final int imgbutton_remove=0x7f020036;
+        public static final int imgbutton_remove_clicked=0x7f020037;
+        public static final int imgbutton_repeater=0x7f020038;
+        public static final int imgbutton_save=0x7f020039;
+        public static final int imgbutton_save_clicked=0x7f02003a;
+        public static final int imgbutton_screen_settings_clicked=0x7f02003b;
+        public static final int imgbutton_settings=0x7f02003c;
+        public static final int imgbutton_settings_clicked=0x7f02003d;
+        public static final int imgbutton_social_media=0x7f02003e;
+        public static final int imgbutton_social_media_clicked=0x7f02003f;
+        public static final int sample_0=0x7f020040;
+        public static final int sample_1=0x7f020041;
+        public static final int sample_2=0x7f020042;
+        public static final int sample_3=0x7f020043;
+        public static final int sample_4=0x7f020044;
+        public static final int sample_5=0x7f020045;
+        public static final int sample_6=0x7f020046;
+        public static final int sample_7=0x7f020047;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0022;
-        public static final int btn_goal_summary_test=0x7f0a000f;
-        public static final int btn_main_buttons_test=0x7f0a0010;
-        public static final int btn_title_bar_test=0x7f0a001a;
-        public static final int button_My_Goals=0x7f0a0006;
-        public static final int button_My_Goals_Padding=0x7f0a0007;
-        public static final int button_Settings=0x7f0a0008;
-        public static final int button_Settings_Padding=0x7f0a0009;
-        public static final int button_Share=0x7f0a000d;
-        public static final int button_add_task=0x7f0a0014;
-        public static final int complete_task=0x7f0a0017;
-        public static final int complete_tasks=0x7f0a0013;
-        public static final int datePicker1=0x7f0a0019;
-        public static final int edit_task=0x7f0a0015;
-        public static final int edit_tasks=0x7f0a0011;
-        public static final int fragment_goal_list=0x7f0a0004;
-        public static final int fragment_main_buttons=0x7f0a0003;
-        public static final int fragment_task_list=0x7f0a0001;
-        public static final int fragment_title=0x7f0a0002;
-        public static final int fragment_title_xml=0x7f0a0000;
-        public static final int gridview=0x7f0a0005;
-        public static final int holder_completeness_flag=0x7f0a0021;
-        public static final int holder_goal_name=0x7f0a001b;
-        public static final int holder_goal_progress_bar=0x7f0a001d;
-        public static final int holder_goal_progress_text=0x7f0a001c;
-        public static final int holder_task_due_date=0x7f0a0020;
-        public static final int holder_task_name=0x7f0a001f;
-        public static final int remove_task=0x7f0a0016;
-        public static final int remove_tasks=0x7f0a0012;
-        public static final int taskListView=0x7f0a000c;
-        public static final int task_check_box=0x7f0a001e;
-        public static final int textview_Goal_List=0x7f0a000e;
-        public static final int textview_Goals_In_Progress=0x7f0a000a;
-        public static final int textview_Goals_In_Progress_Padding=0x7f0a000b;
-        public static final int timePicker1=0x7f0a0018;
+        public static final int action_settings=0x7f0b0055;
+        public static final int add_task_date_picker=0x7f0b002d;
+        public static final int add_task_edit_text=0x7f0b002a;
+        public static final int add_task_repeat_option=0x7f0b002b;
+        public static final int add_task_repeat_text=0x7f0b002c;
+        public static final int button_About=0x7f0b0027;
+        public static final int button_About_Padding=0x7f0b0028;
+        public static final int button_Completed=0x7f0b001a;
+        public static final int button_Completed_Padding=0x7f0b001b;
+        public static final int button_Create_New=0x7f0b0018;
+        public static final int button_Create_New_Padding=0x7f0b0019;
+        public static final int button_Goal_Settings=0x7f0b0022;
+        public static final int button_Goal_Settings_Padding=0x7f0b0021;
+        public static final int button_In_Progress=0x7f0b0017;
+        public static final int button_In_Progress_Padding=0x7f0b0016;
+        public static final int button_My_Goals=0x7f0b000a;
+        public static final int button_My_Goals_Padding=0x7f0b000b;
+        public static final int button_Notifications=0x7f0b0023;
+        public static final int button_Notifications_Padding=0x7f0b0024;
+        public static final int button_Remove=0x7f0b001c;
+        public static final int button_Remove_Padding=0x7f0b001d;
+        public static final int button_Settings=0x7f0b000c;
+        public static final int button_Settings_Padding=0x7f0b000d;
+        public static final int button_Share=0x7f0b004a;
+        public static final int button_Social_Media=0x7f0b0025;
+        public static final int button_Social_Media_Padding=0x7f0b0026;
+        public static final int button_Task_Manager_Cancel=0x7f0b003f;
+        public static final int button_Task_Manager_Cancel_Left=0x7f0b003d;
+        public static final int button_Task_Manager_Cancel_Left_Padding=0x7f0b003e;
+        public static final int button_Task_Manager_Cancel_Right=0x7f0b0041;
+        public static final int button_Task_Manager_Cancel_Right_Padding=0x7f0b0040;
+        public static final int button_add_task=0x7f0b0029;
+        public static final int button_add_task_details=0x7f0b002e;
+        public static final int button_task_manager_add=0x7f0b0037;
+        public static final int complete_task=0x7f0b0049;
+        public static final int complete_tasks=0x7f0b0046;
+        public static final int dialog_datepicker=0x7f0b0008;
+        public static final int dialog_dateview=0x7f0b0007;
+        public static final int edit_task=0x7f0b0047;
+        public static final int edit_tasks=0x7f0b0044;
+        public static final int edittext_Task_Manager_Day=0x7f0b003a;
+        public static final int edittext_Task_Manager_Month=0x7f0b0039;
+        public static final int edittext_Task_Manager_Task_Name=0x7f0b0036;
+        public static final int edittext_Task_Manager_Year=0x7f0b003b;
+        public static final int fragment_goal_list=0x7f0b0004;
+        public static final int fragment_main_buttons=0x7f0b0003;
+        public static final int fragment_my_goals=0x7f0b0005;
+        public static final int fragment_settings=0x7f0b0006;
+        public static final int fragment_task_list=0x7f0b0002;
+        public static final int fragment_title=0x7f0b0000;
+        public static final int gridview=0x7f0b0009;
+        public static final int holder_complete_button=0x7f0b0054;
+        public static final int holder_completeness_flag=0x7f0b0052;
+        public static final int holder_goal_name=0x7f0b004c;
+        public static final int holder_goal_progress_bar=0x7f0b004e;
+        public static final int holder_goal_progress_text=0x7f0b004d;
+        public static final int holder_remove_button=0x7f0b0053;
+        public static final int holder_task_due_date=0x7f0b0051;
+        public static final int holder_task_name=0x7f0b0050;
+        public static final int remove_task=0x7f0b0048;
+        public static final int remove_tasks=0x7f0b0045;
+        public static final int replaceableFragment=0x7f0b0001;
+        public static final int taskListView=0x7f0b002f;
+        public static final int task_check_box=0x7f0b004f;
+        public static final int textview_Goal_List=0x7f0b004b;
+        public static final int textview_Goals_In_Progress=0x7f0b000e;
+        public static final int textview_Goals_In_Progress_Padding=0x7f0b000f;
+        public static final int textview_My_Goals_Header_Bottom_Left=0x7f0b0014;
+        public static final int textview_My_Goals_Header_Bottom_Mid=0x7f0b0012;
+        public static final int textview_My_Goals_Header_Bottom_Right=0x7f0b0015;
+        public static final int textview_My_Goals_Header_Top_Left=0x7f0b0010;
+        public static final int textview_My_Goals_Header_Top_Mid=0x7f0b0011;
+        public static final int textview_My_Goals_Header_Top_Right=0x7f0b0013;
+        public static final int textview_Shadow_Left=0x7f0b001e;
+        public static final int textview_Shadow_Right=0x7f0b001f;
+        public static final int textview_Task_Manager_Date_Spacer=0x7f0b003c;
+        public static final int textview_Task_Manager_Header_Bottom_Left=0x7f0b0033;
+        public static final int textview_Task_Manager_Header_Bottom_Mid=0x7f0b0034;
+        public static final int textview_Task_Manager_Header_Bottom_Right=0x7f0b0035;
+        public static final int textview_Task_Manager_Header_Top_Left=0x7f0b0030;
+        public static final int textview_Task_Manager_Header_Top_Mid=0x7f0b0031;
+        public static final int textview_Task_Manager_Header_Top_Right=0x7f0b0032;
+        public static final int textview_Task_Manager_Tasks=0x7f0b0042;
+        public static final int textview_Task_Manager_Tasks_Spacer=0x7f0b0043;
+        public static final int textview_filler=0x7f0b0020;
+        public static final int textview_task_manager_add_spacer=0x7f0b0038;
     }
     public static final class layout {
         public static final int activity_goal=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int fragment_goal_list=0x7f030002;
-        public static final int fragment_main_buttons=0x7f030003;
-        public static final int fragment_task_list=0x7f030004;
-        public static final int fragment_title=0x7f030005;
-        public static final int goal_summary_fragment=0x7f030006;
-        public static final int main_buttons_fragment=0x7f030007;
-        public static final int task_footer_multiple_selections=0x7f030008;
-        public static final int task_footer_no_selections=0x7f030009;
-        public static final int task_footer_one_selection=0x7f03000a;
-        public static final int task_header=0x7f03000b;
-        public static final int title_bar_fragment=0x7f03000c;
-        public static final int view_holder_goal_item=0x7f03000d;
-        public static final int view_holder_task_item=0x7f03000e;
+        public static final int activity_my_goals=0x7f030002;
+        public static final int activity_settings=0x7f030003;
+        public static final int datepicker_layout=0x7f030004;
+        public static final int fragment_goal_list=0x7f030005;
+        public static final int fragment_main_buttons=0x7f030006;
+        public static final int fragment_my_goals=0x7f030007;
+        public static final int fragment_settings=0x7f030008;
+        public static final int fragment_task_add_button=0x7f030009;
+        public static final int fragment_task_add_detailed=0x7f03000a;
+        public static final int fragment_task_list=0x7f03000b;
+        public static final int fragment_task_manager=0x7f03000c;
+        public static final int fragment_task_multiple_selected=0x7f03000d;
+        public static final int fragment_task_one_selected=0x7f03000e;
+        public static final int fragment_title=0x7f03000f;
+        public static final int view_holder_goal_item=0x7f030010;
+        public static final int view_holder_task_item=0x7f030011;
     }
     public static final class menu {
-        public static final int main=0x7f090000;
+        public static final int main=0x7f0a0000;
     }
     public static final class raw {
-        public static final int test_goals=0x7f040000;
+        public static final int test_goals=0x7f050000;
     }
     public static final class string {
-        public static final int action_settings=0x7f070004;
-        /**  task footer button strings 
+        public static final int action_settings=0x7f080004;
+        /**  task header button strings 
          */
-        public static final int add_task_button=0x7f07000b;
-        public static final int app_name=0x7f070000;
-        public static final int complete_task_button=0x7f07000e;
-        public static final int complete_tasks_button=0x7f070011;
-        public static final int edit_task_button=0x7f07000c;
-        public static final int edit_tasks_button=0x7f07000f;
-        public static final int goal_summary_test=0x7f070002;
-        public static final int main_buttons_test=0x7f070003;
-        public static final int remove_task_button=0x7f07000d;
-        public static final int remove_tasks_button=0x7f070010;
-        public static final int string_Goal_List=0x7f070007;
-        public static final int string_Goal_One=0x7f07000a;
-        public static final int string_Goals_In_Progress=0x7f070009;
-        public static final int string_My_Goals=0x7f070005;
-        public static final int string_Settings=0x7f070006;
-        public static final int string_Share=0x7f070008;
-        public static final int title_bar_test=0x7f070001;
+        public static final int add_task_button=0x7f08000b;
+        /**  task add button detailed strings 
+         */
+        public static final int add_task_edit_text=0x7f080019;
+        public static final int add_task_repeat_text=0x7f08001a;
+        public static final int app_name=0x7f080000;
+        public static final int complete_task_button=0x7f08000e;
+        public static final int complete_tasks_button=0x7f080011;
+        public static final int edit_task_button=0x7f08000c;
+        public static final int edit_tasks_button=0x7f08000f;
+        public static final int goal_summary_test=0x7f080002;
+        public static final int holder_complete_button=0x7f080018;
+        /**  task viewHolder Button Strings 
+         */
+        public static final int holder_remove_button=0x7f080017;
+        public static final int main_buttons_test=0x7f080003;
+        public static final int remove_task_button=0x7f08000d;
+        public static final int remove_tasks_button=0x7f080010;
+        public static final int string_Day=0x7f080015;
+        public static final int string_Goal_List=0x7f080007;
+        public static final int string_Goal_Name=0x7f080012;
+        public static final int string_Goal_One=0x7f08000a;
+        public static final int string_Goals_In_Progress=0x7f080009;
+        public static final int string_Month=0x7f080014;
+        public static final int string_My_Goals=0x7f080005;
+        public static final int string_Settings=0x7f080006;
+        public static final int string_Share=0x7f080008;
+        public static final int string_Task_Name=0x7f080013;
+        public static final int string_Year=0x7f080016;
+        public static final int title_bar_test=0x7f080001;
+        /**  file names 
+         */
+        public static final int user_goals_filename=0x7f08001b;
     }
     public static final class style {
         /** 
@@ -149,10 +283,11 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppTheme=0x7f090002;
+        public static final int noAnimTheme=0x7f090001;
     }
 }

@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_my_goals_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textview_My_Goals_Header_Top_Left"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:background="@drawable/img_header_top_left" />
+
+    <TextView
+        android:id="@+id/textview_My_Goals_Header_Top_Mid"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textview_My_Goals_Header_Bottom_Mid"
+        android:layout_toRightOf="@+id/textview_My_Goals_Header_Top_Left"
+        android:background="@drawable/img_header_top_padding"
+        android:gravity="center"
+        android:text="@string/string_My_Goals" 
+        android:textColor="@android:color/white"/>
+    
+    <TextView
+        android:id="@+id/textview_My_Goals_Header_Top_Right"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_header_top_right" />
+    
+    <TextView
+        android:id="@+id/textview_My_Goals_Header_Bottom_Left"
+        android:layout_width="20dp"
+        android:layout_height="7dp"
+        android:layout_below="@+id/textview_My_Goals_Header_Top_Left"
+        android:background="@drawable/img_header_bottom_left"/>
+    
+    <TextView
+        android:id="@+id/textview_My_Goals_Header_Bottom_Mid"
+        android:layout_width="wrap_content"
+        android:layout_height="7dp"
+        android:layout_below="@+id/textview_My_Goals_Header_Top_Mid"
+        android:layout_toLeftOf="@+id/textview_My_Goals_Header_Bottom_Right"
+        android:layout_toRightOf="@+id/textview_My_Goals_Header_Bottom_Left"
+        android:background="@drawable/img_header_bottom_padding" />
+    
+       <TextView
+        android:id="@+id/textview_My_Goals_Header_Bottom_Right"
+        android:layout_width="20dp"
+        android:layout_height="7dp"
+        android:layout_above="@+id/button_In_Progress_Padding"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/img_header_bottom_right" />
+    
+    <Button
+        android:id="@+id/button_In_Progress"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview_My_Goals_Header_Bottom_Left"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/imgbutton_in_progress"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_In_Progress_Padding"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textview_My_Goals_Header_Bottom_Mid"
+        android:layout_toRightOf="@+id/button_In_Progress"
+        android:background="@drawable/imgbutton_general_padding"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Create_New"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_In_Progress"
+        android:background="@drawable/imgbutton_create_new"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Create_New_Padding"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/button_Create_New"
+        android:layout_below="@+id/button_In_Progress"
+        android:background="@drawable/imgbutton_general_padding"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Completed"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_Create_New"
+        android:background="@drawable/imgbutton_completed"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Completed_Padding"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/button_Completed"
+        android:layout_below="@+id/button_Create_New"
+        android:background="@drawable/imgbutton_general_padding"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Remove"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_Completed"
+        android:background="@drawable/imgbutton_remove"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+    
+    <Button
+        android:id="@+id/button_Remove_Padding"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/button_Remove"
+        android:layout_below="@+id/button_Completed"
+        android:background="@drawable/imgbutton_general_padding"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick" />
+
+    <TextView
+        android:id="@+id/textview_Shadow_Left"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/button_Remove"
+        android:background="@drawable/img_button_shading"
+        />
+    
+    <TextView
+        android:id="@+id/textview_Shadow_Right"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/button_Remove"
+        android:layout_toRightOf="@+id/textview_Shadow_Left"
+        android:background="@drawable/img_button_shadding_padding"
+        />
+
+    <TextView
+        android:id="@+id/textview_filler"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textview_Shadow_Left"
+        android:background="@color/fragment_my_goals_background" />
+    
+</RelativeLayout>
